@@ -1,0 +1,4 @@
+.fomBlock{
+    display:flex;
+    flex-direction: row;
+}
