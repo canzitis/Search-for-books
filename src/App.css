@@ -1,14 +1,8 @@
-.sitePage{
-  width:1920px;
-  height:1080px;
-  background-color:red;
-  padding: 50px;
-}
 
 .App {
   text-align: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color:rgb(197, 197, 197);
+  
 }
 
 .App-logo {
@@ -45,4 +39,3 @@
     transform: rotate(360deg);
   }
 }
-

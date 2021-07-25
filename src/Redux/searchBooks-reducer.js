@@ -2,19 +2,19 @@ import {
     booksApi
 } from "../api/api"
 
-const GET_BOOKS = 'GET_BOOKS'
+const SET_BOOKS = 'GET_BOOKS'
 
 const instalState = {
-
+    books: []
 }
 
 
 const serchBooksReducers = (state = instalState, action) => {
     switch (action.type) {
-        case GET_BOOKS:
+        case SET_BOOKS:
             return {
                 ...state,
-                data: action.search
+                books: [...action.books]
             }
 
             default:
@@ -22,10 +22,10 @@ const serchBooksReducers = (state = instalState, action) => {
     }
 }
 
-export const setBooks = (search) => {
+export const setBooks = (books) => {
     return {
-        type: GET_BOOKS,
-        search
+        type: SET_BOOKS,
+        books
     }
 }
 
@@ -33,6 +33,7 @@ export const getBooks = (search) => {
     return async (dispatch) => {
         const data = await booksApi.getBooks(search)
         console.log(data)
+        dispatch(setBooks(data.data.items))
     }
 }
 

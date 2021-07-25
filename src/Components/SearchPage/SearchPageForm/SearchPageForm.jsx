@@ -1,44 +1,30 @@
 import { Formik } from "formik";
-import s from "./SearchPageForm.css";
+import s from "./SearchPageForm.module.css";
+import serachImg from "../../../img/search.png";
 
 const SearchPageForm = (props) => {
   const addSearch = (values) => {
     props.getBooks(values.searchText);
   };
-  /*  validate={(values) => {
-    const errors = {};
-    if (!values.search) {
-      errors.search = "Required";
-    }
-    return errors;
-  }}
-   */
   return (
     <Formik
       className={s.fomBlock}
       initialValues={{ searchText: "" }}
       onSubmit={addSearch}
     >
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting,
-      }) => (
-        <form onSubmit={handleSubmit}>
+      {({ values, handleChange, handleBlur, handleSubmit }) => (
+        <form onSubmit={handleSubmit} className={s.fromBlock}>
           <input
+            placeholder="Введите название книги"
+            className={s.searchFromInput}
             type="text"
             name="searchText"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.email}
           />
-          <div>{errors.email && touched.email && errors.email}</div>
-          <button type="submit" disabled="" className={s.searchBtn}>
-            Search
+          <button className={s.searchBtn} type="submit">
+            <img src={serachImg} alt="" />
           </button>
         </form>
       )}

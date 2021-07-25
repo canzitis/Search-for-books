@@ -1,0 +1,23 @@
+.searchFromInput {
+    font-size: 20px;
+    width:600px;
+    height:30px;
+}
+
+.fromBlock{
+    display:flex;
+    justify-content:center;
+}
+
+.searchBtn{
+    margin-top: 1px;
+    margin-left: 3px;
+    width: 35px;
+    height:34px;
+    border: 0;
+}
+
+.searchBtn:hover{
+    cursor: pointer;
+    background-color:rgb(119, 119, 119);
+}

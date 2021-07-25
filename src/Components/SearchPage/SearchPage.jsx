@@ -7,11 +7,8 @@ const SearchPage = (props) => {
       <div className={s.searchPageImgLogo}>
         <img src="" alt="" />
       </div>
-      <div>
+      <div className={s.searchPageForm}>
         <SearchPageForm {...props} />
-      </div>
-      <div>
-        <h5>Прикоснись быстрому поиску книг </h5>
       </div>
     </div>
   );

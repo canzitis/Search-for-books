@@ -1,6 +1,5 @@
 import SearchPage from "./SearchPage";
 import React from "react";
-import s from "./SearchPage.module.css";
 import { connect } from "react-redux";
 import { getBooks } from "../../Redux/searchBooks-reducer";
 
@@ -11,7 +10,9 @@ class SearchPageContainer extends React.PureComponent {
 }
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    books: state.serchBooksPage.books,
+  };
 };
 
 export default connect(mapStateToProps, { getBooks })(SearchPageContainer);
