@@ -1,14 +1,14 @@
 import s from "./SearchPage.module.css";
 import SearchPageForm from "./SearchPageForm/SearchPageForm";
 
-const SearchPage = () => {
+const SearchPage = (props) => {
   return (
     <div className={s.searchPage}>
       <div className={s.searchPageImgLogo}>
         <img src="" alt="" />
       </div>
       <div>
-        <SearchPageForm />
+        <SearchPageForm {...props} />
       </div>
       <div>
         <h5>Прикоснись быстрому поиску книг </h5>

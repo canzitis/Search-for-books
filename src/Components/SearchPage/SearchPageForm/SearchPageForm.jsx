@@ -1,24 +1,23 @@
 import { Formik } from "formik";
 import s from "./SearchPageForm.css";
 
-const SearchPageForm = () => {
+const SearchPageForm = (props) => {
+  const addSearch = (values) => {
+    props.getBooks(values.searchText);
+  };
+  /*  validate={(values) => {
+    const errors = {};
+    if (!values.search) {
+      errors.search = "Required";
+    }
+    return errors;
+  }}
+   */
   return (
     <Formik
       className={s.fomBlock}
-      initialValues={{ email: "", password: "" }}
-      validate={(values) => {
-        const errors = {};
-        if (!values.email) {
-          errors.email = "Required";
-        }
-        return errors;
-      }}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
-      }}
+      initialValues={{ searchText: "" }}
+      onSubmit={addSearch}
     >
       {({
         values,
@@ -32,13 +31,13 @@ const SearchPageForm = () => {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            name="email"
+            name="searchText"
             onChange={handleChange}
             onBlur={handleBlur}
             value={values.email}
           />
           <div>{errors.email && touched.email && errors.email}</div>
-          <button type="submit" disabled={isSubmitting} className={s.searchBtn}>
+          <button type="submit" disabled="" className={s.searchBtn}>
             Search
           </button>
         </form>
