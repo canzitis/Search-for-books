@@ -8,7 +8,12 @@ const instanceAPI = {
 export const booksApi = {
     getBooks(searchText) {
         return axios.get(`${instanceAPI.baseURL}?maxResults=40&q=${searchText}&key=${instanceAPI.APIKEY}`).then(response => {
-            debugger;
+            return response
+        })
+    },
+
+    getBookPage(id) {
+        return axios.get(`https://www.googleapis.com/books/v1/volumes/${id}?key=${instanceAPI.APIKEY}`).then(response => {
             return response
         })
     }

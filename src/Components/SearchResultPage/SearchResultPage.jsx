@@ -2,18 +2,18 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import s from "./SearchResultPage.module.css";
 import booksDefault from "../../img/booksDefault.jpg";
+import Preloader from "../Preloader/Preloader";
 
 const SearchResultPage = (props) => {
-  debugger;
   if (!props.loadingBooks) {
-    <div>Loading...</div>;
+    <Preloader />;
   }
   return (
     <div className={s.pageBooks}>
       <div className={s.searchResultPage}>
         {props.books.map((b) => (
           <div key={b.id} className={s.bookResult}>
-            <NavLink to={"/books/" + b.id}>
+            <NavLink to={"/bookPage/" + b.id}>
               {b.volumeInfo.imageLinks ? (
                 <img src={b.volumeInfo.imageLinks.thumbnail} alt="" />
               ) : (
@@ -27,15 +27,23 @@ const SearchResultPage = (props) => {
             </div>
             <div>
               <b>Автор:</b>
-              <p>{b.volumeInfo.authors}</p>
+              {b.volumeInfo.authors ? <p>{b.volumeInfo.authors}</p> : <p>-</p>}
             </div>
             <div>
               <b>Дата публикации:</b>
-              <p>{b.volumeInfo.publishedDate}</p>
+              {b.volumeInfo.publishedDate ? (
+                <p>{b.volumeInfo.publishedDate}</p>
+              ) : (
+                <p>-</p>
+              )}
             </div>
             <div>
               <b>Издатель:</b>
-              <p>{b.volumeInfo.publisher}</p>
+              {b.volumeInfo.publisher ? (
+                <p>{b.volumeInfo.publisher}</p>
+              ) : (
+                <p>-</p>
+              )}
             </div>
           </div>
         ))}
