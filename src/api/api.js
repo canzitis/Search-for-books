@@ -7,7 +7,8 @@ const instanceAPI = {
 
 export const booksApi = {
     getBooks(searchText) {
-        return axios.get(`${instanceAPI.baseURL}?q=${searchText}:keys&key=${instanceAPI.APIKEY}`).then(response => {
+        return axios.get(`${instanceAPI.baseURL}?maxResults=40&q=${searchText}&key=${instanceAPI.APIKEY}`).then(response => {
+            debugger;
             return response
         })
     }

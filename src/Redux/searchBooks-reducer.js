@@ -3,9 +3,11 @@ import {
 } from "../api/api"
 
 const SET_BOOKS = 'GET_BOOKS'
+const LOADING_BOOKS = 'LOADING_BOOKS'
 
 const instalState = {
-    books: []
+    books: [],
+    loadingBooks: null,
 }
 
 
@@ -14,13 +16,20 @@ const serchBooksReducers = (state = instalState, action) => {
         case SET_BOOKS:
             return {
                 ...state,
-                books: [...action.books]
+                books: [...action.books],
+                    loadingBooks: true
             }
+            case LOADING_BOOKS:
+                return {
+                    ...state,
 
-            default:
-                return state
+                }
+
+                default:
+                    return state
     }
 }
+
 
 export const setBooks = (books) => {
     return {
@@ -29,11 +38,24 @@ export const setBooks = (books) => {
     }
 }
 
+export const loadingBoksValue = () => {
+    return {
+        type: LOADING_BOOKS,
+    }
+}
+
+
+
 export const getBooks = (search) => {
+    debugger;
     return async (dispatch) => {
         const data = await booksApi.getBooks(search)
-        console.log(data)
-        dispatch(setBooks(data.data.items))
+        if (data.status === 200) {
+            console.log(data)
+            dispatch(setBooks(data.data.items))
+            dispatch(loadingBoksValue())
+        }
+
     }
 }
 

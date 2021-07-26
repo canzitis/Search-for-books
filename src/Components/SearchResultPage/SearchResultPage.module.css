@@ -2,6 +2,7 @@
     margin-top: 50px;
     background-color:rgb(194, 170, 156);
 }
+
 .searchResultPage {
     
     text-align: center;
@@ -9,7 +10,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 1em;
-
 }
 
 .bookItem{
@@ -17,4 +17,14 @@
     text-align: center;
     float: left;
     width: 25%;
+}
+
+.bookResult p,h4,h5{
+    margin: 0;
+    padding: 3px;
+}
+
+.bookResult img{
+    width:150px;
+    height: 200px;
 }

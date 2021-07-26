@@ -12,6 +12,7 @@ class SearchResultPageContainer extends React.PureComponent {
 const mapStateToProps = (state) => {
   return {
     books: state.serchBooksPage.books,
+    loadingBooks: state.serchBooksPage.loadingBooks,
   };
 };
 
