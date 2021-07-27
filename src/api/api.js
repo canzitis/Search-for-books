@@ -2,7 +2,7 @@ import * as axios from 'axios';
 
 const instanceAPI = {
     baseURL: 'https://www.googleapis.com/books/v1/volumes',
-    APIKEY: "AIzaSyC3L9NO1mvqLFNRmjKfpZ5w6lDuPUlzFQs"
+    APIKEY: "AIzaSyBe_fTqQ_crJP5sUkYNvevPlMHcNZOiwpI"
 }
 
 export const booksApi = {
