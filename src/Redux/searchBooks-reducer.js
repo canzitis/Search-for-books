@@ -40,6 +40,7 @@ export const setBooks = (books) => {
 
 export const getBooks = (search) => {
     return async (dispatch) => {
+        debugger;
         const data = await booksApi.getBooks(search)
         if (data.status === 200) {
             dispatch(setBooks(data.data.items))

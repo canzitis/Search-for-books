@@ -11,12 +11,9 @@ class App extends React.Component {
     return (
       <div className={s.sitePage}>
         <div className="App">
-          <Route
-            path="/bookPage/:id?"
-            render={() => <ProfileBooksContainer />}
-          />
           <Route path="" render={() => <SearchPageContainer />} />
           <Route path="" render={() => <SearchResultPageContainer />} />
+          <Route path="/book/:id?" render={() => <ProfileBooksContainer />} />
         </div>
       </div>
     );

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { getBooks } from "../../Redux/searchBooks-reducer";
 import SearchResultPage from "./SearchResultPage";
 
-class SearchResultPageContainer extends React.PureComponent {
+class SearchResultPageContainer extends React.Component {
   render() {
     return <SearchResultPage {...this.props} />;
   }

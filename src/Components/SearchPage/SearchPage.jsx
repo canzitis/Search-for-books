@@ -4,9 +4,6 @@ import SearchPageForm from "./SearchPageForm/SearchPageForm";
 const SearchPage = (props) => {
   return (
     <div className={s.searchPage}>
-      <div className={s.searchPageImgLogo}>
-        <img src="" alt="" />
-      </div>
       <div className={s.searchPageForm}>
         <SearchPageForm {...props} />
       </div>

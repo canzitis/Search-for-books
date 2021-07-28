@@ -6,16 +6,17 @@ const SET_PAGE_BOOK = 'SET_PAGE_BOOK'
 
 
 const instalState = {
-    book: []
-
+    book: [],
+    setupBooks: null
 }
 
-const PageBooksReducer = (state = instalState, action) => {
+const pageBooksReducer = (state = instalState, action) => {
     switch (action.type) {
         case SET_PAGE_BOOK:
             return {
                 ...state,
-                book: action.book
+                book: action.book,
+                    setupBooks: true
 
             }
             default:
@@ -36,11 +37,8 @@ export const setBookPage = (book) => {
 export const getBookPage = (id) => {
     return async (dispatch) => {
         const data = await booksApi.getBookPage(id)
-        console.log(data)
         dispatch(setBookPage(data.data))
-
-
     }
 }
 
-export default PageBooksReducer
+export default pageBooksReducer
