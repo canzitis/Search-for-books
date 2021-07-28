@@ -58,3 +58,40 @@
   width:18px;
   height:18px;
 }
+
+@media(max-width:400px){
+  .blockFlex{
+    display: block;
+    justify-content:none;
+  
+    padding: 0;
+    margin:0 auto;
+    
+    text-align: center;
+    max-width:250px;
+    height: 90%;
+    background-color: rgb(241, 241, 241);
+    margin-bottom: 60px;
+    border-radius:50px;
+    box-shadow: 0 0 20px black;
+  }
+
+  .blockA{
+    padding: 30px;
+  
+    text-align: center;
+  }
+
+  .blockB{
+    text-align: center;
+    padding: 10px;
+  }
+
+  .btnBack{
+    display:block;
+    margin: 0 auto;
+    padding: 20px;
+    width:18px;
+    height:18px;
+  }
+}

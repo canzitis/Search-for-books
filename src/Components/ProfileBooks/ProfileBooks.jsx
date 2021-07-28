@@ -5,7 +5,6 @@ import defaultImgBook from "../../img/booksDefault.jpg";
 import backImg from "../../img/backImg.png";
 
 const ProfileBooks = (props) => {
-  debugger;
   if (!props.setupBooks) {
     return <Preloader />;
   }
