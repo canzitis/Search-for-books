@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/World-of-digital-books/static/css/main.b76e90e4.chunk.css",
+    "main.css": "/World-of-digital-books/static/css/main.094ae841.chunk.css",
     "main.js": "/World-of-digital-books/static/js/main.eae93d5c.chunk.js",
     "main.js.map": "/World-of-digital-books/static/js/main.eae93d5c.chunk.js.map",
     "runtime-main.js": "/World-of-digital-books/static/js/runtime-main.d1881288.js",
@@ -10,7 +10,7 @@
     "static/js/3.91798460.chunk.js": "/World-of-digital-books/static/js/3.91798460.chunk.js",
     "static/js/3.91798460.chunk.js.map": "/World-of-digital-books/static/js/3.91798460.chunk.js.map",
     "index.html": "/World-of-digital-books/index.html",
-    "static/css/main.b76e90e4.chunk.css.map": "/World-of-digital-books/static/css/main.b76e90e4.chunk.css.map",
+    "static/css/main.094ae841.chunk.css.map": "/World-of-digital-books/static/css/main.094ae841.chunk.css.map",
     "static/js/2.3af9cbb2.chunk.js.LICENSE.txt": "/World-of-digital-books/static/js/2.3af9cbb2.chunk.js.LICENSE.txt",
     "static/media/SearchPage.module.css": "/World-of-digital-books/static/media/backgroindImgSearch.0b31e589.jpeg",
     "static/media/booksDefault.94b49e8a.jpg": "/World-of-digital-books/static/media/booksDefault.94b49e8a.jpg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.d1881288.js",
     "static/js/2.3af9cbb2.chunk.js",
-    "static/css/main.b76e90e4.chunk.css",
+    "static/css/main.094ae841.chunk.css",
     "static/js/main.eae93d5c.chunk.js"
   ]
 }
