@@ -28,11 +28,60 @@
     color:white;
 }
 
+@media(max-width:900px){
+    .searchFromInput {
+        font-size: 13px;
+        width:300px;
+        height:20px;
+    }
+
+   .fromBlock{
+        display:block;
+       
+    }
+    
+    .searchBtn{
+        margin-top: 10px;
+        margin-left: 0;
+        width: 50px;
+        height:23px;
+        border: 0;
+    }
+    .errorsText{
+        margin-top:5px;
+        font-size: 12px;
+    }
+  }
 
 @media(max-width:400px){
     .searchFromInput {
         font-size: 13px;
         width:300px;
+        height:20px;
+    }
+
+   .fromBlock{
+        display:block;
+       
+    }
+    
+    .searchBtn{
+        margin-top: 10px;
+        margin-left: 0;
+        width: 50px;
+        height:23px;
+        border: 0;
+    }
+    .errorsText{
+        margin-top:5px;
+        font-size: 12px;
+    }
+  }
+  
+  @media(max-width:300px){
+    .searchFromInput {
+        font-size: 13px;
+        width:200px;
         height:20px;
     }
 

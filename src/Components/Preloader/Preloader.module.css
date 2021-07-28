@@ -1,7 +1,15 @@
 .preloader img{
   width:100px;
   height:100px;
-  margin-top: 200px;
+  margin-top: 50px;
+}
+
+@media(max-width:900px){
+  .preloader img{
+    width:100px;
+    height:100px;
+    margin-top: 30px;
+  }
 }
 
 @media(max-width:400px){

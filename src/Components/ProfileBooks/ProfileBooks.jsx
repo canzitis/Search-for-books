@@ -10,7 +10,7 @@ const ProfileBooks = (props) => {
   }
   return (
     <div className={s.blockInfoBook}>
-      <NavLink to={""}>
+      <NavLink to={"/search"}>
         <img src={backImg} alt="" className={s.btnBack} />
       </NavLink>
       <div className={s.blockFlex}>
