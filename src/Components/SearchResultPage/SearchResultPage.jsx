@@ -5,9 +5,9 @@ import booksDefault from "../../img/booksDefault.jpg";
 import Preloader from "../Preloader/Preloader";
 
 const SearchResultPage = (props) => {
-  /* if (!props.loadingBooks) {
+  if (!props.loadingBooks) {
     return <Preloader />;
-  } */
+  }
   return (
     <div className={s.pageBooks}>
       <div className={s.searchResultPage}>

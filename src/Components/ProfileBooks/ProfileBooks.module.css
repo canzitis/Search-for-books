@@ -1,0 +1,60 @@
+.blockFlex{
+  display: flex;
+  justify-content:space-around;
+
+  padding: 30px;
+  margin:0 auto;
+  
+  text-align: center;
+  width:90%;
+  height: 90%;
+  background-color: rgb(241, 241, 241);
+  margin-bottom: 60px;
+  border-radius:50px;
+  box-shadow: 0 0 20px black;
+}
+.blockA img{
+  width:190px;
+  height:250px;
+  margin-bottom: 20px;
+  
+  box-shadow: 0 0 20px black;
+}
+
+.blockA{
+  padding: 0 50px 0 100px;
+
+  text-align: left;
+}
+
+.blockB{
+  text-align: left;
+  padding: 0 20px 20px 0;
+}
+
+.blockInfoBookA p{
+  margin-top:1px;
+}
+
+.blockInfoBookB p{
+  margin-top:1px;
+}
+
+.blockInfoBookA b{
+  font-size:17px;
+}
+.blockInfoBookB b{
+  font-size:17px;
+}
+
+.blockInfoBookA ul{
+  padding:10px;
+  margin:0;
+}
+
+.btnBack{
+  display:block;
+  margin: 20px 0 20px 100px;
+  width:18px;
+  height:18px;
+}

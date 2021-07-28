@@ -6,7 +6,7 @@ const SET_PAGE_BOOK = 'SET_PAGE_BOOK'
 
 
 const instalState = {
-    book: [],
+    book: null,
     setupBooks: null
 }
 
@@ -37,6 +37,7 @@ export const setBookPage = (book) => {
 export const getBookPage = (id) => {
     return async (dispatch) => {
         const data = await booksApi.getBookPage(id)
+        debugger;
         dispatch(setBookPage(data.data))
     }
 }

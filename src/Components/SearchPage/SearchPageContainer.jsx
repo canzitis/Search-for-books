@@ -1,7 +1,10 @@
 import SearchPage from "./SearchPage";
 import React from "react";
 import { connect } from "react-redux";
-import { getBooks } from "../../Redux/searchBooks-reducer";
+import {
+  getBooks,
+  setmodeActivationBooks,
+} from "../../Redux/searchBooks-reducer";
 
 class SearchPageContainer extends React.PureComponent {
   render() {
@@ -15,4 +18,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { getBooks })(SearchPageContainer);
+export default connect(mapStateToProps, { getBooks, setmodeActivationBooks })(
+  SearchPageContainer
+);

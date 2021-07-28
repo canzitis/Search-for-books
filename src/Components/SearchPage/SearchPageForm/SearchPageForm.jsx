@@ -4,6 +4,7 @@ import serachImg from "../../../img/search.png";
 
 const SearchPageForm = (props) => {
   const addSearch = (values) => {
+    props.setmodeActivationBooks();
     props.getBooks(values.searchText);
   };
   return (
