@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/World-of-digital-books/static/css/main.10199548.chunk.css",
-    "main.js": "/World-of-digital-books/static/js/main.57a50424.chunk.js",
-    "main.js.map": "/World-of-digital-books/static/js/main.57a50424.chunk.js.map",
+    "main.css": "/World-of-digital-books/static/css/main.440bd255.chunk.css",
+    "main.js": "/World-of-digital-books/static/js/main.4f736034.chunk.js",
+    "main.js.map": "/World-of-digital-books/static/js/main.4f736034.chunk.js.map",
     "runtime-main.js": "/World-of-digital-books/static/js/runtime-main.d1881288.js",
     "runtime-main.js.map": "/World-of-digital-books/static/js/runtime-main.d1881288.js.map",
-    "static/js/2.15ac57da.chunk.js": "/World-of-digital-books/static/js/2.15ac57da.chunk.js",
-    "static/js/2.15ac57da.chunk.js.map": "/World-of-digital-books/static/js/2.15ac57da.chunk.js.map",
+    "static/js/2.e8c426e4.chunk.js": "/World-of-digital-books/static/js/2.e8c426e4.chunk.js",
+    "static/js/2.e8c426e4.chunk.js.map": "/World-of-digital-books/static/js/2.e8c426e4.chunk.js.map",
     "static/js/3.91798460.chunk.js": "/World-of-digital-books/static/js/3.91798460.chunk.js",
     "static/js/3.91798460.chunk.js.map": "/World-of-digital-books/static/js/3.91798460.chunk.js.map",
     "index.html": "/World-of-digital-books/index.html",
-    "static/css/main.10199548.chunk.css.map": "/World-of-digital-books/static/css/main.10199548.chunk.css.map",
-    "static/js/2.15ac57da.chunk.js.LICENSE.txt": "/World-of-digital-books/static/js/2.15ac57da.chunk.js.LICENSE.txt",
+    "static/css/main.440bd255.chunk.css.map": "/World-of-digital-books/static/css/main.440bd255.chunk.css.map",
+    "static/js/2.e8c426e4.chunk.js.LICENSE.txt": "/World-of-digital-books/static/js/2.e8c426e4.chunk.js.LICENSE.txt",
     "static/media/SearchPage.module.css": "/World-of-digital-books/static/media/backgroindImgSearch.0b31e589.jpeg",
     "static/media/booksDefault.94b49e8a.jpg": "/World-of-digital-books/static/media/booksDefault.94b49e8a.jpg",
     "static/media/preloader.cbf51cb4.gif": "/World-of-digital-books/static/media/preloader.cbf51cb4.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.d1881288.js",
-    "static/js/2.15ac57da.chunk.js",
-    "static/css/main.10199548.chunk.css",
-    "static/js/main.57a50424.chunk.js"
+    "static/js/2.e8c426e4.chunk.js",
+    "static/css/main.440bd255.chunk.css",
+    "static/js/main.4f736034.chunk.js"
   ]
 }
