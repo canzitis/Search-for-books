@@ -1,15 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import s from "./SearchResultPage.module.css";
 import booksDefault from "../../img/booksDefault.jpg";
 import Preloader from "../Preloader/Preloader";
+import leftPortionPageImg from "../../img/leftPortion.png";
+import rightPortionPagImg from "../../img/RightPortion.png";
 
 const SearchResultPage = (props) => {
+  debugger;
+
+  const pagesCount = Math.ceil(props.totalItems / props.pageSize);
+  const pagesPortionSize = Math.ceil(pagesCount / props.portionSize);
+  const [portionNumber, setPortionNumber] = useState(1);
+  const leftPortionPageNumber = (portionNumber - 1) * props.portionSize + 1;
+  const rightPortionPageNumber = portionNumber * props.portionSize;
+  const pages = [];
+  for (let i = 1; i <= pagesCount; i++) {
+    pages.push(i);
+  }
+
   if (!props.loadingBooks) {
     return <Preloader />;
   }
   return (
     <div className={s.pageBooks}>
+      <div className={s.PagesBloc}>
+        {portionNumber > 1 && (
+          <div className={s.chevronBoubleLeft}>
+            <img
+              onClick={() => {
+                setPortionNumber(portionNumber - 1);
+              }}
+              src={leftPortionPageImg}
+              alt=""
+            />
+          </div>
+        )}
+        {pages
+          .filter(
+            (p) => p >= leftPortionPageNumber && p <= rightPortionPageNumber
+          )
+          .map((p) => {
+            debugger;
+
+            return (
+              <span className={s.activBtnPages} key={p.id}>
+                <button
+                  className={props.currentPage === p && s.buttonAktive}
+                  onClick={() => {
+                    props.onPageChanged(p);
+                  }}
+                >
+                  {p}
+                </button>
+              </span>
+            );
+          })}
+        {pagesPortionSize > portionNumber && (
+          <div className={s.chevronBoubleRight}>
+            <img
+              onClick={() => {
+                setPortionNumber(portionNumber + 1);
+              }}
+              src={rightPortionPagImg}
+              alt=""
+            />
+          </div>
+        )}
+      </div>
+
       <div className={s.searchResultPage}>
         {props.books.map((b) => (
           <div key={b.id} className={s.bookResult}>

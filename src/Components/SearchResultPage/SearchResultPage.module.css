@@ -43,6 +43,32 @@
     padding-top: 10px;
 }
 
+.PagesBloc{
+    text-align: center;
+    display:flex;
+    justify-content: center;
+}
+
+.PagesBloc button{
+    width:50px;
+    background-color:white;
+    border:none;
+}
+
+
+.buttonAktive{
+font-weight: 800;
+}
+
+.PagesBloc button:hover{
+    cursor: pointer;
+}
+.chevronBoubleLeft img:hover{
+    cursor: pointer;
+}
+.chevronBoubleRight img:hover{
+    cursor: pointer;
+}
 
 @media(max-width:900px){
     .searchResultPage {
@@ -70,9 +96,20 @@
     }
 
     .bookResult{
-        height:450px;
+        height:100%;
         text-align: center;
-        padding: 10px 50px 0 50px
+        padding: 40px 10px 0 10px
+    }
+
+    .PagesBloc button{
+        width:30px;
+        background-color:white;
+        border:none;
+    }
+    
+    
+    .buttonAktive{
+    font-weight: 800;
     }
 }
 
@@ -90,4 +127,17 @@
         text-align: center;
         padding: 10px 20px 0 20px
     }
+
+    .PagesBloc button{
+        width:30px;
+        background-color:white;
+        border:none;
+    }
+    
+    
+    .buttonAktive{
+    font-weight: 800;
+    }
 }
+
+
