@@ -5,7 +5,6 @@ import SearchResultPage from "./SearchResultPage";
 
 class SearchResultPageContainer extends React.Component {
   onPageChanged = (currentPage) => {
-    debugger;
     if (currentPage > this.props.currentPage) {
       this.props.getBooks(this.props.searchName, this.props.startIndex + 10);
       this.props.getcurrentPage(currentPage);

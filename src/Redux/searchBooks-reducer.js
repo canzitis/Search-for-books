@@ -111,12 +111,11 @@ export const getBooks = (search, startIndex = 0) => {
     return async (dispatch) => {
         dispatch(setStartIndex(startIndex))
         dispatch(setSearchName(search))
+        dispatch(setmodeActivationBooks())
         const data = await booksApi.getBooks(search, startIndex)
         if (data.status === 200) {
             dispatch(setBooks(data.data.items))
-            dispatch(setTotalItems(data.data.totalItems))
-
-        }
+            dispatch(setTotalItems(data.data.totalItems))        }
 
     }
 }
@@ -124,7 +123,6 @@ export const getBooks = (search, startIndex = 0) => {
 export const getcurrentPage = (currentPage) => {
     return (dispatch) => {
         dispatch(setCurrentPage(currentPage))
-
     }
 }
 
