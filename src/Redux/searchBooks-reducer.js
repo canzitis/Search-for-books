@@ -108,13 +108,11 @@ export const setStartIndex = (startIndex) => {
 
 
 export const getBooks = (search, startIndex = 0) => {
-    debugger;
     return async (dispatch) => {
         dispatch(setStartIndex(startIndex))
         dispatch(setSearchName(search))
         const data = await booksApi.getBooks(search, startIndex)
         if (data.status === 200) {
-            debugger;
             dispatch(setBooks(data.data.items))
             dispatch(setTotalItems(data.data.totalItems))
 
@@ -124,7 +122,6 @@ export const getBooks = (search, startIndex = 0) => {
 }
 
 export const getcurrentPage = (currentPage) => {
-    debugger;
     return (dispatch) => {
         dispatch(setCurrentPage(currentPage))
 

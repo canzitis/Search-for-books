@@ -7,8 +7,6 @@ import leftPortionPageImg from "../../img/leftPortion.png";
 import rightPortionPagImg from "../../img/RightPortion.png";
 
 const SearchResultPage = (props) => {
-  debugger;
-
   const pagesCount = Math.ceil(props.totalItems / props.pageSize);
   const pagesPortionSize = Math.ceil(pagesCount / props.portionSize);
   const [portionNumber, setPortionNumber] = useState(1);
@@ -41,8 +39,6 @@ const SearchResultPage = (props) => {
             (p) => p >= leftPortionPageNumber && p <= rightPortionPageNumber
           )
           .map((p) => {
-            debugger;
-
             return (
               <span className={s.activBtnPages} key={p.id}>
                 <button
