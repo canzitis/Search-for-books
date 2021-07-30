@@ -61,29 +61,35 @@ const ProfileBooks = (props) => {
             <a target="_blank" href={props.book.accessInfo.webReaderLink}>
               Читать
             </a>
-            <div className={s.price}>
-              <h3>Цена: </h3>
-              <div className={s.priceBlockFlex}>
-                <p>
-                  {props.book.saleInfo.listPrice
-                    ? props.book.saleInfo.listPrice.amount
-                    : '-'}{" "}
-                  {props.book.saleInfo.listPrice
-                    ? props.book.saleInfo.listPrice.currencyCode
-                    : null}
-                </p>
-              </div>
-              <div className={s.shop}>
-                <div>
-                  <img src={shopImg} alt="" />
+            {props.book.saleInfo.listPrice ? (
+              <div className={s.price}>
+                <h3>Цена: </h3>
+                <div className={s.priceBlockFlex}>
+                  <p>
+                    {props.book.saleInfo.listPrice
+                      ? props.book.saleInfo.listPrice.amount
+                      : "-"}{" "}
+                    {props.book.saleInfo.listPrice
+                      ? props.book.saleInfo.listPrice.currencyCode
+                      : null}
+                  </p>
                 </div>
-                <div>
-                  <button>
-                    <h4>Купить</h4>
-                  </button>
+                <div className={s.shop}>
+                  <div>
+                    <img src={shopImg} alt="" />
+                  </div>
+                  <div>
+                    <button>
+                      <a target="_blank" href={props.book.saleInfo.buyLink}>
+                        Купить
+                      </a>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div />
+            )}
           </div>
         </div>
       </div>
