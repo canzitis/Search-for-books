@@ -7,7 +7,7 @@
   
   text-align: center;
   width:90%;
-  height: 90%;
+  height: 100%;
   background-color: rgb(241, 241, 241);
   margin-bottom: 60px;
 
@@ -29,7 +29,7 @@
 
 .blockB{
   text-align: left;
-  padding: 0 20px 20px 0;
+  padding: 0 20px 0 0;
 }
 
 .blockInfoBookA p{
@@ -38,13 +38,20 @@
 
 .blockInfoBookB p{
   margin-top:1px;
+  word-wrap: break-word
 }
 
 .blockInfoBookA b{
   font-size:17px;
+  word-wrap: break-word
 }
 .blockInfoBookB b{
   font-size:17px;
+  word-wrap: break-word
+}
+
+.description{
+border-bottom: solid black 1px ;
 }
 
 .blockInfoBookA ul{
@@ -57,6 +64,59 @@
   margin: 20px 0 20px 100px;
   width:25px;
   height:25px;
+}
+
+.webReaderLink{
+  width:100%;
+  height:100%;
+  margin:30px 0 30px 0;
+}
+
+.webReaderLink a{
+  text-decoration: none;
+}
+
+.webReaderLink a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.price{
+  font-size:18px;
+}
+.price h3{
+  margin-bottom:5px;
+}
+
+.priceBlockFlex p{
+  margin: 0;
+  padding-right: 3px;
+}
+
+.shop{
+  display:flex;
+  flex-direction: row;
+}
+
+.shop img{
+  margin: 20px 10px 0 0;
+ width: 25px;
+ height: 25px;
+}
+
+.shop button{
+  margin-top: 20px;
+  width:80px;
+  height:30px;
+  border-radius: 10px;
+  background-color:rgb(255, 255, 255);
+}
+
+.shop button:hover{
+ cursor: pointer;
+}
+.shop button:active{
+ background-color:rgb(184, 238, 184);
 }
 
 @media(max-width:900px){
@@ -92,6 +152,19 @@
     width:20px;
     height:20px;
   }
+  .descriptionBorder{
+    margin: 0 auto;
+    margin-top: 30px ;
+    width: 50%;
+    border-bottom: solid black 1px ;
+    }
+    
+    .shop{
+      display:flex;
+      flex-direction: row;
+     justify-content:center;
+    }
+
 }
 
 @media(max-width:450px){
@@ -128,6 +201,33 @@
     width:20px;
     height:20px;
   }
+
+  .descriptionBorder{
+    margin: 0 auto;
+    margin-top: 30px ;
+    width: 50%;
+    border-bottom: solid black 1px ;
+    }
+
+    .shop{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;  
+    }
+
+    .shop img{
+      margin: 20px 0 0 0;
+     width: 25px;
+     height: 25px;
+    }
+
+    .shop button{
+      margin-top: 0;
+      width:80px;
+      height:30px;
+      border-radius: 10px;
+      background-color:rgb(255, 255, 255);
+    }
 }
 
 @media(max-width:340px){

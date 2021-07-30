@@ -3,6 +3,7 @@ import Preloader from "../Preloader/Preloader";
 import s from "./ProfileBooks.module.css";
 import defaultImgBook from "../../img/booksDefault.jpg";
 import backImg from "../../img/backImg.png";
+import shopImg from "../../img/shopping-cart.png";
 
 const ProfileBooks = (props) => {
   if (!props.setupBooks) {
@@ -53,6 +54,36 @@ const ProfileBooks = (props) => {
             <p>{props.book.volumeInfo.categories}</p>
             <b>Описание:</b>
             <p>{props.book.volumeInfo.description}</p>
+            <div className={s.descriptionBorder}></div>
+          </div>
+          <div className={s.webReaderLink}>
+            <b>Бесплатный фрагмент: </b>
+            <a target="_blank" href={props.book.accessInfo.webReaderLink}>
+              Читать
+            </a>
+            <div className={s.price}>
+              <h3>Цена: </h3>
+              <div className={s.priceBlockFlex}>
+                <p>
+                  {props.book.saleInfo.listPrice
+                    ? props.book.saleInfo.listPrice.amount
+                    : '-'}{" "}
+                  {props.book.saleInfo.listPrice
+                    ? props.book.saleInfo.listPrice.currencyCode
+                    : null}
+                </p>
+              </div>
+              <div className={s.shop}>
+                <div>
+                  <img src={shopImg} alt="" />
+                </div>
+                <div>
+                  <button>
+                    <h4>Купить</h4>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
