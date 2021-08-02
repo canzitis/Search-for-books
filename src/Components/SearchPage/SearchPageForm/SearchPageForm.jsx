@@ -1,4 +1,4 @@
-import { Formik } from "formik";
+import { Field, Formik } from "formik";
 import s from "./SearchPageForm.module.css";
 import serachImg from "../../../img/search.png";
 
@@ -12,13 +12,22 @@ const SearchPageForm = (props) => {
   };
   const addSearch = (values) => {
     props.setmodeActivationBooks();
-    props.getBooks(values.searchText);
+    props.getBooks(
+      values.startIndex,
+      values.searchText,
+      values.printType,
+      values.orderBy
+    );
   };
   return (
     <Formik
       validate={validateTextPost}
       className={s.fomBlock}
-      initialValues={{ searchText: "" }}
+      initialValues={{
+        searchText: "",
+        printType: "all",
+        orderBy: "relevance",
+      }}
       onSubmit={addSearch}
     >
       {({ values, errors, handleChange, handleBlur, handleSubmit }) => (
@@ -40,6 +49,24 @@ const SearchPageForm = (props) => {
               </button>
             </div>
           </div>
+          <div className={s.printTypeBlockFlex}>
+            <div className={s.printTypeBlock}>
+              <h5>Тип печати: </h5>
+              <Field as="select" name="printType">
+                <option value="all">Все</option>
+                <option value="books">Книги</option>
+                <option value="magazines">Журналы</option>
+              </Field>
+            </div>
+            <div className={s.orderByBlock}>
+              <h5>Сортировка:</h5>
+              <Field as="select" name="orderBy">
+                <option value="relevance">По релевантности</option>
+                <option value="newest">От новых к старым</option>
+              </Field>
+            </div>
+          </div>
+
           <div className={s.errorsText}>{errors.text && errors.text}</div>
         </form>
       )}

@@ -27,6 +27,23 @@
     font-size: 15px;
     color:white;
 }
+.printTypeBlockFlex{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 auto;
+    color: white;
+}
+
+.printTypeBlock{
+    margin: 10px;
+    width:90px;
+}
+
+.orderByBlock{
+    margin: 10px;
+    width:140px;
+}
 
 @media(max-width:900px){
     .searchFromInput {
@@ -67,6 +84,7 @@
     
     .searchBtn{
         margin-top: 10px;
+        margin-bottom: 20px;
         margin-left: 0;
         width: 50px;
         height:23px;
@@ -75,6 +93,17 @@
     .errorsText{
         margin-top:5px;
         font-size: 12px;
+    }
+    .printTypeBlockFlex{
+        display: block;
+        font-size:15px;
+    }
+    .printTypeBlock{
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .orderByBlock{
+        margin: 0 auto;
     }
   }
   

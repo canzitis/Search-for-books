@@ -6,10 +6,20 @@ import SearchResultPage from "./SearchResultPage";
 class SearchResultPageContainer extends React.Component {
   onPageChanged = (currentPage) => {
     if (currentPage > this.props.currentPage) {
-      this.props.getBooks(this.props.searchName, this.props.startIndex + 10);
+      this.props.getBooks(
+        this.props.startIndex + 10,
+        this.props.search,
+        this.props.printType,
+        this.props.orderBy
+      );
       this.props.getcurrentPage(currentPage);
     } else {
-      this.props.getBooks(this.props.searchName, this.props.startIndex - 10);
+      this.props.getBooks(
+        this.props.startIndex - 10,
+        this.props.search,
+        this.props.printType,
+        this.props.orderBy
+      );
       this.props.getcurrentPage(currentPage);
     }
   };
@@ -28,8 +38,10 @@ const mapStateToProps = (state) => {
     pageSize: state.serchBooksPage.pageSize,
     totalItems: state.serchBooksPage.totalItems,
     portionSize: state.serchBooksPage.portionSize,
-    searchName: state.serchBooksPage.searchName,
+    search: state.serchBooksPage.search,
     startIndex: state.serchBooksPage.startIndex,
+    printType: state.serchBooksPage.printType,
+    orderBy: state.serchBooksPage.orderBy,
   };
 };
 export default connect(mapStateToProps, { getBooks, getcurrentPage })(

@@ -7,11 +7,13 @@ const SET_BOOKS = 'GET_BOOKS'
 const MODE_ACTIVATION = 'MODE_ACTIVATION'
 const SET_TOTAL_ITEMS = 'SET_TOTAL_ITEMS'
 const SET_CURRENT_PAGE = "SET_CURRENT_PAGE"
-const SET_SEARCH_NAME = "SET_SEARCH_NAME"
+const SET_SEARCH_DATA = "SET_SEARCH_DATA"
 const SET_START_INDEX = "SET_START_INDEX"
 
 const instalState = {
-    searchName: null,
+    search: null,
+    printType: null,
+    orderBy: null,
     books: [],
     startIndex: 0,
     currentPage: 1,
@@ -45,10 +47,12 @@ const serchBooksReducers = (state = instalState, action) => {
                             ...state,
                             currentPage: action.currentPage
                         }
-                        case SET_SEARCH_NAME:
+                        case SET_SEARCH_DATA:
                             return {
                                 ...state,
-                                searchName: action.searchName
+                                search: action.search,
+                                    printType: action.printType,
+                                    orderBy: action.orderBy,
                             }
                             case SET_START_INDEX:
                                 return {
@@ -91,10 +95,12 @@ export const setCurrentPage = (currentPage) => {
 };
 
 
-export const setSearchName = (searchName) => {
+export const setSearchData = (search, printType, orderBy) => {
     return {
-        type: SET_SEARCH_NAME,
-        searchName
+        type: SET_SEARCH_DATA,
+        search,
+        printType,
+        orderBy
     }
 }
 
@@ -107,15 +113,17 @@ export const setStartIndex = (startIndex) => {
 
 
 
-export const getBooks = (search, startIndex = 0) => {
+export const getBooks = (startIndex = 0, search, printType, orderBy) => {
+    debugger;
     return async (dispatch) => {
         dispatch(setStartIndex(startIndex))
-        dispatch(setSearchName(search))
+        dispatch(setSearchData(search, printType, orderBy, ))
         dispatch(setmodeActivationBooks())
-        const data = await booksApi.getBooks(search, startIndex)
+        const data = await booksApi.getBooks(startIndex, search, printType, orderBy)
         if (data.status === 200) {
             dispatch(setBooks(data.data.items))
-            dispatch(setTotalItems(data.data.totalItems))        }
+            dispatch(setTotalItems(data.data.totalItems))
+        }
 
     }
 }
