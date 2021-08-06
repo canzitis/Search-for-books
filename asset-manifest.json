@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/World-of-digital-books/static/css/main.bfce0912.chunk.css",
-    "main.js": "/World-of-digital-books/static/js/main.27710e1c.chunk.js",
-    "main.js.map": "/World-of-digital-books/static/js/main.27710e1c.chunk.js.map",
-    "runtime-main.js": "/World-of-digital-books/static/js/runtime-main.1e5093bb.js",
-    "runtime-main.js.map": "/World-of-digital-books/static/js/runtime-main.1e5093bb.js.map",
-    "static/js/2.67ab2817.chunk.js": "/World-of-digital-books/static/js/2.67ab2817.chunk.js",
-    "static/js/2.67ab2817.chunk.js.map": "/World-of-digital-books/static/js/2.67ab2817.chunk.js.map",
-    "static/js/3.aab93feb.chunk.js": "/World-of-digital-books/static/js/3.aab93feb.chunk.js",
-    "static/js/3.aab93feb.chunk.js.map": "/World-of-digital-books/static/js/3.aab93feb.chunk.js.map",
-    "index.html": "/World-of-digital-books/index.html",
-    "static/css/main.bfce0912.chunk.css.map": "/World-of-digital-books/static/css/main.bfce0912.chunk.css.map",
-    "static/js/2.67ab2817.chunk.js.LICENSE.txt": "/World-of-digital-books/static/js/2.67ab2817.chunk.js.LICENSE.txt",
-    "static/media/SearchPage.module.css": "/World-of-digital-books/static/media/backgroindImgSearch.0b31e589.jpeg",
-    "static/media/booksDefault.94b49e8a.jpg": "/World-of-digital-books/static/media/booksDefault.94b49e8a.jpg",
-    "static/media/preloader.cbf51cb4.gif": "/World-of-digital-books/static/media/preloader.cbf51cb4.gif"
+    "main.css": "/Search-for-books/static/css/main.a390eab7.chunk.css",
+    "main.js": "/Search-for-books/static/js/main.d73d63df.chunk.js",
+    "main.js.map": "/Search-for-books/static/js/main.d73d63df.chunk.js.map",
+    "runtime-main.js": "/Search-for-books/static/js/runtime-main.ad3b6c2f.js",
+    "runtime-main.js.map": "/Search-for-books/static/js/runtime-main.ad3b6c2f.js.map",
+    "static/js/2.67ab2817.chunk.js": "/Search-for-books/static/js/2.67ab2817.chunk.js",
+    "static/js/2.67ab2817.chunk.js.map": "/Search-for-books/static/js/2.67ab2817.chunk.js.map",
+    "static/js/3.aab93feb.chunk.js": "/Search-for-books/static/js/3.aab93feb.chunk.js",
+    "static/js/3.aab93feb.chunk.js.map": "/Search-for-books/static/js/3.aab93feb.chunk.js.map",
+    "index.html": "/Search-for-books/index.html",
+    "static/css/main.a390eab7.chunk.css.map": "/Search-for-books/static/css/main.a390eab7.chunk.css.map",
+    "static/js/2.67ab2817.chunk.js.LICENSE.txt": "/Search-for-books/static/js/2.67ab2817.chunk.js.LICENSE.txt",
+    "static/media/SearchPage.module.css": "/Search-for-books/static/media/backgroindImgSearch.0b31e589.jpeg",
+    "static/media/booksDefault.94b49e8a.jpg": "/Search-for-books/static/media/booksDefault.94b49e8a.jpg",
+    "static/media/preloader.cbf51cb4.gif": "/Search-for-books/static/media/preloader.cbf51cb4.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.1e5093bb.js",
+    "static/js/runtime-main.ad3b6c2f.js",
     "static/js/2.67ab2817.chunk.js",
-    "static/css/main.bfce0912.chunk.css",
-    "static/js/main.27710e1c.chunk.js"
+    "static/css/main.a390eab7.chunk.css",
+    "static/js/main.d73d63df.chunk.js"
   ]
 }
